@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classic Resume</title>
     <link rel="stylesheet" href="classic.css">
+    <!-- PDF download library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
@@ -40,6 +43,7 @@
                 <textarea id="skills"></textarea>
 
                 <button type="button" onclick="generateResume()">Preview Resume</button>
+                <button type="button" onclick="enhanceWithAI()">Enhance with AI</button>
             </form>
         </div>
 
@@ -66,6 +70,12 @@
         </div>
     </div>
 
-    <script src="classic.js"></script>
+    <div class="enhanced-resume-box" style="display: none; margin-top: 20px;">
+        <h3>Enhanced Resume (Copy and paste into your fields if desired)</h3>
+        <div id="enhancedResume" style="border: 1px solid #ccc; padding: 1rem;"></div>
+        <!-- <button id="copyEnhancedBtn">Copy Enhanced Resume</button> -->
+    </div>
+
+    <script type="module" src="./classic.js"></script>
 </body>
 </html>

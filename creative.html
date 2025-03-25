@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Resume</title>
     <link rel="stylesheet" href="creative.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
@@ -40,6 +41,7 @@
             <textarea id="education" placeholder="List your educational background..."></textarea>
 
             <button onclick="updatePreview()">Generate Resume</button>
+            <button type="button" onclick="enhanceWithAI()">Enhance with AI</button>
         </div>
 
         <!-- Resume Preview -->
@@ -68,8 +70,13 @@
         </div>
     </div>
 
+    <div class="enhanced-resume-box" style="display: none; margin-top: 20px;">
+        <h3>Enhanced Resume (Copy and paste into your fields if desired)</h3>
+        <div id="enhancedResume" style="border: 1px solid #ccc; padding: 1rem;"></div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script src="creative.js"></script>
+    <script type="module" src="creative.js"></script>
 
 </body>
 </html>
