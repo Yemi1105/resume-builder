@@ -1,5 +1,3 @@
-// login.js
-
 import { loginUser } from "./js/api.js"; 
 
 document.getElementById("signin").addEventListener("submit", async (event) => {

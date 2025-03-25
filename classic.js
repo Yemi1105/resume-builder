@@ -1,8 +1,5 @@
-// classic.js (in the root folder)
-
 import { enhanceResume } from "./js/api.js";
 
-// Function to generate real-time preview from user inputs
 export function generateResume() {
     document.getElementById("previewName").innerText = document.getElementById("fullName").value || "Full Name";
     document.getElementById("previewEmail").innerText = "Email: " + (document.getElementById("email").value || "example@example.com");
@@ -13,14 +10,10 @@ export function generateResume() {
     document.getElementById("previewSkills").innerText = document.getElementById("skills").value || "Your skills here...";
 }
 
-// Function to enhance resume via AI and display the formatted result using Marked
 export async function enhanceWithAI() {
     try {
-        // Get references for the enhanced resume box and container
         const enhancedBox = document.querySelector(".enhanced-resume-box");
         const enhancedDiv = document.getElementById("enhancedResume");
-
-        // Gather user input values
         const fullName = document.getElementById("fullName").value.trim() || "No Name";
         const email = document.getElementById("email").value.trim() || "No Email";
         const phone = document.getElementById("phone").value.trim() || "No Phone";
